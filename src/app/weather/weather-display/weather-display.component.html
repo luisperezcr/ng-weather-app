@@ -3,30 +3,30 @@
     <div class="card-top">
       <img ngSrc="../../../assets/{{ image }}" alt="" fill="true" priority>
       <div class="weather-data">
-        <div class="location">{{ weatherData?.name }}, {{ weatherData?.country }}</div>
-        <div class="temperature">{{ weatherData?.temperature | number: '1.0-0' }}°C</div>
-        <div class="feels-like-temperature">Feels like {{ weatherData?.feelsLike | number: '1.0-0' }}°C</div>
+        <div class="location">{{ weatherData.name }}, {{ weatherData.country }}</div>
+        <div class="temperature">{{ weatherData.temperature | number: '1.0-0' }}°C</div>
+        <div class="feels-like-temperature">Feels like {{ weatherData.feelsLike | number: '1.0-0' }}°C</div>
       </div>
     </div>
     <div class="card-bottom">
       <div class="row">
         <div class="column">
           <img ngSrc="../../../assets/temp_hot.png" alt="Max Temperature" width="28" height="28">
-          <span>{{ weatherData?.maxTemperature }}°C</span>
+          <span>{{ weatherData.maxTemperature }}°C</span>
         </div>
         <div class="column">
           <img ngSrc="../../../assets/temp_cold.png" alt="Min Temperature" width="28" height="28">
-          <span>{{ weatherData?.minTemperature }}°C</span>
+          <span>{{ weatherData.minTemperature }}°C</span>
         </div>
       </div>
       <div class="row">
         <div class="column">
           <img ngSrc="../../../assets/humidity.png" alt="Humidity" width="28" height="28">
-          <span>{{ weatherData?.humidity }}%</span>
+          <span>{{ weatherData.humidity }}%</span>
         </div>
         <div class="column">
           <img ngSrc="../../../assets/wind.png" alt="Wind" width="28" height="28">
-          <span>{{ weatherData?.wind }} km/h</span>
+          <span>{{ weatherData.wind }} km/h</span>
         </div>
       </div>
     </div>
