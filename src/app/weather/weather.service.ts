@@ -60,6 +60,6 @@ export class WeatherService {
    * @returns The lat and long of the selected city
    */
   getLatAndLon(city: string) {
-    return this.http.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${environment.weatherAPI}`);
+    return this.http.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${environment.weatherAPI}`);
   }
 }
