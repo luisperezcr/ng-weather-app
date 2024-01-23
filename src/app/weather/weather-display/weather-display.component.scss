@@ -1,0 +1,82 @@
+@use '@angular/material' as mat;
+
+article {
+  height: 500px;
+  width: 450px;
+  @include mat.elevation(6);
+  border-radius: 12px;
+  background-color: #9FA8DA;
+
+  .card-top {
+    position: relative;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 75%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .weather-data {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+
+      .location {
+        color: #FFF;
+        font-size: 3.2em;
+        text-align: center;
+        font-weight: lighter;
+      }
+
+      .temperature {
+        color: #FFF;
+        font-size: 5.5em;
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .card-bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      .column {
+        width: 50%;
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          color: #424242;
+          font-weight: 400;
+          font-size: 1.1em;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

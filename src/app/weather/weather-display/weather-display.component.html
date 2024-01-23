@@ -1,0 +1,31 @@
+<article>
+  <div class="card-top">
+    <img [ngSrc]="image" alt="" fill="true" priority>
+    <div class="weather-data">
+      <div class="location">San Jose, CR</div>
+      <div class="temperature">{{ 14.40 | number: '1.0-0' }}°C</div>
+    </div>
+  </div>
+  <div class="card-bottom">
+    <div class="row">
+      <div class="column">
+        <img ngSrc="../../../assets/temp_hot.png" alt="Max Temperature" width="28" height="28">
+        <span>18°C</span>
+      </div>
+      <div class="column">
+        <img ngSrc="../../../assets/temp_cold.png" alt="Min Temperature" width="28" height="28">
+        <span>6°C</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img ngSrc="../../../assets/humidity.png" alt="Humidity" width="28" height="28">
+        <span>75%</span>
+      </div>
+      <div class="column">
+        <img ngSrc="../../../assets/wind.png" alt="Wind" width="28" height="28">
+        <span>85 km/h</span>
+      </div>
+    </div>
+  </div>
+</article>
