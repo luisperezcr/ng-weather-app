@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DecimalPipe, NgOptimizedImage } from '@angular/common';
+import { WeatherData } from '../weather.service';
 
 @Component({
   selector: 'app-weather-display',
@@ -11,6 +12,14 @@ import { DecimalPipe, NgOptimizedImage } from '@angular/common';
   templateUrl: './weather-display.component.html',
   styleUrl: './weather-display.component.scss'
 })
-export class WeatherDisplayComponent {
-  image = '../../../assets/cold.jpg';
+export class WeatherDisplayComponent implements OnChanges {
+  image!: string;
+
+  @Input() weatherData!: WeatherData;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes && changes['weatherData'].currentValue) {
+      this.image = (this.weatherData && this.weatherData.temperature < 18) ? 'cold.jpg' : 'hot.jpg';
+    }
+  }
 }

@@ -5,7 +5,7 @@ article {
   width: 450px;
   @include mat.elevation(6);
   border-radius: 12px;
-  background-color: #9FA8DA;
+  background-color: #C5CAE9;
 
   .card-top {
     position: relative;
@@ -47,6 +47,13 @@ article {
         text-align: center;
         font-weight: 500;
       }
+
+      .feels-like-temperature {
+        color: #FFF;
+        font-size: 1em;
+        text-align: center;
+        font-weight: 300;
+      }
     }
   }
 
@@ -78,5 +85,44 @@ article {
         }
       }
     }
+  }
+}
+
+.no-selected-city {
+  font-weight: lighter;
+  font-size: 1.2em;
+  color: #424242;
+  text-align: center;
+}
+
+@media screen and (max-width: 525px) {
+  article {
+    width: 95vw;
+
+    .card-top {
+      .weather-data {
+        .location {
+          font-size: 2.2em;
+        }
+
+        .temperature {
+          font-size: 4.5em;
+        }
+
+        .feels-like-temperature {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .no-selected-city {
+    font-size: 1em;
+    margin: 0 20px;
   }
 }

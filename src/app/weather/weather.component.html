@@ -1,0 +1,7 @@
+<article>
+  <app-city-search (selectedCity)="onSelectedCity($event)"></app-city-search>
+  <app-weather-display [weatherData]="selectedCityWeather"></app-weather-display>
+  <span class="hint">
+    The search will return up to 5 cities matching your search input. For a more accurate search please use "<i>CityName, CountryCode</i>". For example, "<i>London, GB</i>" instead of only "<i>London</i>".
+  </span>
+</article>

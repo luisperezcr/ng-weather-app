@@ -1,0 +1,19 @@
+<div class="input-wrapper">
+  <mat-form-field appearance="outline">
+    <mat-label>City</mat-label>
+    <input type="text"
+           placeholder="City name"
+           aria-label="City"
+           matInput
+           [formControl]="citySearch"
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      @for (city of cityOptions; track city) {
+        <mat-option value="{{ city.name }}, {{ city.country }}" (onSelectionChange)="onSelectedCity(city)">{{ city.name }}, {{ city.country }}</mat-option>
+      }
+    </mat-autocomplete>
+    @if (isLoading) {
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    }
+  </mat-form-field>
+</div>
