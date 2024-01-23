@@ -1,6 +1,6 @@
-# WeatherApp
+# Angular Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+This project is built using Angular 17 & Open Weather API. See the result [here](https://ng17-weather-app.web.app/).
 
 ## Development server
 
